@@ -1,38 +1,46 @@
 package miniredis
 
-import (
-	"reflect"
-	"testing"
-)
+// import (
+// 	"reflect"
+// 	"testing"
+// )
 
-// assert fails the test if the condition is false.
-func assert(tb testing.TB, condition bool, msg string, v ...interface{}) {
-	if !condition {
-		tb.Errorf(msg, v...)
-	}
-}
+// // assert fails the test if the condition is false.
+// func assert(tb *testing.T, condition bool, msg string, v ...interface{}) {
+// 	tb.Helper()
 
-// ok fails the test if an err is not nil.
-func ok(tb testing.TB, err error) {
-	if err != nil {
-		tb.Errorf("unexpected error: %s", err.Error())
-	}
-}
+// 	if !condition {
+// 		tb.Errorf(msg, v...)
+// 	}
+// }
 
-// equals fails the test if exp is not equal to act.
-func equals(tb testing.TB, exp, act interface{}) {
-	if !reflect.DeepEqual(exp, act) {
-		tb.Errorf("expected: %#v got: %#v", exp, act)
-	}
-}
+// // ok fails the test if an err is not nil.
+// func ok(tb *testing.T, err error) {
+// 	tb.Helper()
 
-// mustFail compares the error strings
-func mustFail(tb testing.TB, err error, want string) {
-	if err == nil {
-		tb.Errorf("expected an error, but got a nil")
-	}
+// 	if err != nil {
+// 		tb.Errorf("unexpected error: %s", err.Error())
+// 	}
+// }
 
-	if have := err.Error(); have != want {
-		tb.Errorf("have %q, want %q", have, want)
-	}
-}
+// // equals fails the test if exp is not equal to act.
+// func equals(tb *testing.T, exp, act interface{}) {
+// 	tb.Helper()
+
+// 	if !reflect.DeepEqual(exp, act) {
+// 		tb.Errorf("expected: %#v got: %#v", exp, act)
+// 	}
+// }
+
+// // mustFail compares the error strings
+// func mustFail(tb *testing.T, err error, want string) {
+// 	tb.Helper()
+
+// 	if err == nil {
+// 		tb.Errorf("expected an error, but got a nil")
+// 	}
+
+// 	if have := err.Error(); have != want {
+// 		tb.Errorf("have %q, want %q", have, want)
+// 	}
+// }
