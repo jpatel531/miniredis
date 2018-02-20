@@ -3,8 +3,8 @@ package miniredis_test
 import (
 	"time"
 
-	"github.com/alicebob/miniredis"
 	"github.com/garyburd/redigo/redis"
+	"github.com/jpatel531/miniredis"
 )
 
 func Example() {

@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/alicebob/miniredis/server"
+	"github.com/jpatel531/miniredis/server"
 )
 
 // commandsGeneric handles EXPIRE, TTL, PERSIST, &c.

@@ -5,7 +5,7 @@ package miniredis
 import (
 	"strings"
 
-	"github.com/alicebob/miniredis/server"
+	"github.com/jpatel531/miniredis/server"
 )
 
 func commandsServer(m *Miniredis) {

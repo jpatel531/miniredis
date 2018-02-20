@@ -4,7 +4,7 @@ import (
 	redigo "github.com/garyburd/redigo/redis"
 	"github.com/yuin/gopher-lua"
 
-	"github.com/alicebob/miniredis/server"
+	"github.com/jpatel531/miniredis/server"
 )
 
 func mkLuaFuncs(conn redigo.Conn) map[string]lua.LGFunction {
